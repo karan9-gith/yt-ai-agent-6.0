@@ -1,0 +1,125 @@
+# ==============================================================================
+# ContentPilot AI — Comprehensive Git Exclusion Rules
+# Prevents node_modules, database files, generated media, build artifacts, and secrets
+# ==============================================================================
+
+# 1. Environment and Secrets
+.env
+.env.*
+*.env
+*.env.*
+backend/.env
+backend/.env.*
+client/.env
+client/.env.*
+!.env.example
+!*.env.example
+!backend/.env.example
+*.pem
+*.key
+*.cert
+credentials/
+**/credentials/
+tokens/
+**/tokens/
+credentials.json
+tokens.json
+service-account*.json
+client_secrets*.json
+*.token
+*.secret
+
+# 2. Dependencies
+node_modules/
+*/node_modules/
+**/node_modules/
+backend/node_modules/
+client/node_modules/
+.pnp/
+.pnp.js
+
+# 3. Build & Compilation Artifacts
+dist/
+*/dist/
+**/dist/
+backend/dist/
+client/dist/
+build/
+*/build/
+**/build/
+*.tsbuildinfo
+.cache/
+.vite/
+.tmp/
+temp/
+tmp/
+*.zip
+
+# 4. Logs
+logs/
+*/logs/
+**/logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# 5. Persistent Storage & Media Cache
+storage/
+**/storage/
+backend/storage/
+uploads/
+**/uploads/
+generated/
+**/generated/
+output/
+**/output/
+
+# 6. Rendered Video & Audio Media Files
+*.mp4
+*.mov
+*.mkv
+*.avi
+*.webm
+*.mp3
+*.wav
+*.aac
+*.ogg
+*.flac
+*.m4a
+
+# 7. SQLite & Database Files
+*.sqlite
+*.sqlite3
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+*.db-*
+dev.db*
+prod.db*
+backend/*.db*
+backend/dev.db*
+backend/prod.db*
+prisma/*.db*
+backend/prisma/*.db*
+prisma/*.db-journal
+prisma/*.db-wal
+prisma/*.db-shm
+
+# 8. Test Coverage & Tooling
+coverage/
+.turbo/
+.vitest/
+
+# 9. OS & Editor Artifacts
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
