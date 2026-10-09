@@ -1,36 +1,25 @@
 {
-  "name": "contentpilot-ai",
+  "name": "@contentpilot/client",
   "version": "1.0.0",
-  "description": "Enterprise-grade autonomous YouTube automation platform with multi-agent orchestration",
+  "description": "ContentPilot AI — Operations Studio & Approval Dashboard",
   "private": true,
-  "workspaces": [
-    "backend",
-    "client"
-  ],
+  "type": "module",
   "scripts": {
-    "dev": "npm run dev --workspace=backend",
-    "dev:client": "npm run dev --workspace=client",
-    "dev:all": "npm run dev --workspaces",
-    "build": "npm run build --workspaces",
-    "build:client": "npm run build --workspace=client",
-    "build:backend": "npm run prisma:generate --workspace=backend && npm run build --workspace=backend",
-    "start": "npm run start --workspace=backend",
-    "start:worker": "npm run start:worker --workspace=backend",
-    "typecheck": "npm run typecheck --workspace=backend",
-    "lint": "npm run lint --workspaces",
-    "test": "npm run test --workspace=backend",
-    "prisma:generate": "npm run prisma:generate --workspace=backend",
-    "prisma:migrate": "npm run prisma:migrate --workspace=backend",
-    "prisma:push": "npm run prisma:push --workspace=backend"
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "lint": "tsc --noEmit"
   },
-  "keywords": [
-    "youtube-automation",
-    "ai-agents",
-    "video-production",
-    "gemini",
-    "ffmpeg",
-    "content-creation"
-  ],
-  "author": "ContentPilot AI Team",
-  "license": "MIT"
+  "dependencies": {
+    "lucide-react": "^0.454.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.3",
+    "typescript": "^5.6.3",
+    "vite": "^5.4.10"
+  }
 }
